@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-style: normal;
+  background-color: hsl(185, 41%, 84%);
+}
+header {
+  margin-top: 2em;
+  text-align: center;
+}
+header p {
+  letter-spacing: 3px;
+}
+span {
+  display: block;
+}
+section {
+  display: flex;
+  gap: 2em;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 1000px;
+  margin: 2em auto 0;
+  border-radius: 10px;
+  padding: 1.5em;
+}
+label {
+  display: block;
+  margin-bottom: 0.3em;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+input {
+  width: 100%;
+  padding: 7px;
+  background-color: hsl(189, 41%, 97%);
+  border: 1px solid transparent;
+  outline: none;
+  color: hsl(183, 100%, 15%);
+  font-family: 'Space Mono', monospace;
+  text-align: right;
+}
+input:focus {
+  border-color: hsl(172, 67%, 45%);
+}
+.input-cont {
+  position: relative;
+}
+.dollar {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  color: hsl(184, 14%, 56%);
+}
+.custom {
+  padding: 0.3em;
+  border-radius: 5px;
+  width: 100%;
+  color: hsl(183, 100%, 15%);
+}
+
+.custom::placeholder {
+  text-align: center;
+  color: hsl(184, 14%, 56%);
+}
+
+.tip-cont {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.tip-cont p {
+  font-size: 0.8rem;
+}
+.tip-btn-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+button {
+  font-family: 'Space Mono', monospace;
+  padding: 0.4em;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: hsl(172, 67%, 45%);
+}
+
+article {
+  flex-basis: 50%;
+  padding: 1em;
+}
+article:last-child {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+}
+.amount-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+  color: hsl(0, 0%, 100%);
+}
+.comment {
+  font-weight: 400;
+  font-size: 12px;
+}
+.amount {
+  font-size: 1.5em;
+  color: hsl(172, 67%, 45%);
+}
+input[type='reset'] {
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(186, 97%, 58%);
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2.3em;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+input[type='reset']:active {
+  transform: scale(0.95);
+}
+input[type='reset']:disabled {
+  background-color: hsl(184, 14%, 56%);
+  color: hsl(185, 41%, 84%);
+  cursor: no-drop;
+}
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 3em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+@media screen and (width < 400px) {
+  section {
+    flex-direction: column;
+    width: 90vw;
+  }
+  article {
+    flex-basis: 100%;
+  }
+  article:first-child {
+    padding: 0;
+  }
+  .tip-btn-cont {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*error message*/
+.label-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span.error {
+  font-size: 0.7rem;
+  color: red;
+  display: none;
+}
+span.error.visible {
+  display: block;
+}
+
+.error {
+  border-color: red;
+}
